@@ -38,22 +38,28 @@ function reset() {
 // Funktionen für "BMI Berechnung / IF / ELSEIF / ELSE"
 
 function BMI() {
-	var gewicht = document.getElementById('Gewicht').value
+	var gewicht = parseFloat(document.getElementById('Gewicht').value)
 	var grösse = document.getElementById('Grösse').value
 
 	let bmi = gewicht / (grösse*grösse)
 
-	if (bmi < 18.5){
-		document.getElementById('outputbmi').innerHTML = "Sie sind Untergewichtig!";
+	if (grösse < 20 || gewicht > 250 || grösse < 0.7 || grösse > 2.5) {
+		document.getElementById('outputbmi').innerHTML = "Bitte geben Sie realistische Werte ein! :)";
+	} else {
+		if (bmi < 18.5){
+			document.getElementById('outputbmi').innerHTML = "Sie sind Untergewichtig!";
+		}
+		else if (bmi >= 18.5 && bmi < 24.9) {
+			document.getElementById('outputbmi').innerHTML = "Sie haben ein Normalgewicht";
+		}
+		else {
+			document.getElementById('outputbmi').innerHTML = "Sie haben Übergewicht!";
+		}
 	}
-	else if (bmi >= 18.5 && bmi < 24.9) {
-		document.getElementById('outputbmi').innerHTML = "Sie haben ein Normalgewicht";
-	}
-	else {
-		document.getElementById('outputbmi').innerHTML = "Sie haben Übergewicht!";
-	}
+
 }
 
 function resetbmi() {
 	document.getElementById('outputbmi').innerHTML = "";
 }
+
