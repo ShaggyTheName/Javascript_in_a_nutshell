@@ -77,7 +77,7 @@ function resetbmi() {
         
         <button class="btn btn-run" onclick="BMI()">Run</button>
       
-        <button class="btn btn-run" onclick="reset()">Reset</button>
+        <button class="btn btn-run" onclick="resetbmi()">Reset</button>
         
       </div>
      

@@ -44,16 +44,16 @@ function BMI() {
 	let bmi = gewicht / (grösse*grösse)
 
 	if (grösse < 20 || gewicht > 250 || grösse < 0.7 || grösse > 2.5) {
-		document.getElementById('outputbmi').innerHTML = "Bitte geben Sie realistische Werte ein! :)";
+		document.getElementById('output').innerHTML = "Bitte geben Sie realistische Werte ein! :)";
 	} else {
 		if (bmi < 18.5){
-			document.getElementById('outputbmi').innerHTML = "Sie sind Untergewichtig!";
+			document.getElementById('output').innerHTML = "Sie sind Untergewichtig!";
 		}
 		else if (bmi >= 18.5 && bmi < 24.9) {
-			document.getElementById('outputbmi').innerHTML = "Sie haben ein Normalgewicht";
+			document.getElementById('output').innerHTML = "Sie haben ein Normalgewicht";
 		}
 		else {
-			document.getElementById('outputbmi').innerHTML = "Sie haben Übergewicht!";
+			document.getElementById('output').innerHTML = "Sie haben Übergewicht!";
 		}
 	}
 
